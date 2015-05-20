@@ -1,0 +1,14 @@
+¿Que son los Servlets?
+
+Son modulos escritos en Java, usados en servidores con el fin de extender sus capacidades de respuesta.
+Los usos mas comunes son para generar paginas web de forma dinamica a partir de las peticiones que se 
+realicen en la web.
+Servlets: Se ejecuta del lado del servidor.
+Applet: Se ejecuta del lado del cliente.
+
+Caracteristicas:
+-Sesiones: Seguimiento de usuarios por medio de servlets y por medio de sesiones.
+-Cookies: Pequeños datos en texto plano que pueden ser guardados en el cliente.
+ La API(Application Programming Interface) de servlets permite un manejo fácil y limpio de ellas.
+-Multi-thread: Soportan el acceso concurrente de los clientes.
+-Programación en Java: Se obtienen las características de multiplataforma o acceso a APIs como JDBC, RMI, etc.
