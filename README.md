@@ -1,2 +1,2 @@
 # ElementosPOO
-Materia de Elementos de Programación Orientada a Objetos
+Materia de Elementos de Programación Orientados a Objetos
