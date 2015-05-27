@@ -10,6 +10,7 @@
     <servlet-mapping>
 <!-- Nombre de como lo identifica la parte Cliente -->        
         <servlet-name>ServletAutenticar</servlet-name>
+        <url-pattern>/ingresar</url-pattern>
         <url-pattern>/autenticar</url-pattern>
     </servlet-mapping>
     <session-config>

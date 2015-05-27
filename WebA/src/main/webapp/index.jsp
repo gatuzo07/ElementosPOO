@@ -9,7 +9,10 @@
     </head>
     <body>
 <!-- Encabezado h1
-     Scriplet < %  % >
+     Scriplet < % aqui podemos escribir codigo de logica Ejemplo:
+                int edad=26;
+            out.println("tu edad es:"+edad);
+     % >
      Formularios form, action para invocar un servicio
      uri = invoca un servicio
      url = invoca una pagina web
@@ -23,16 +26,13 @@
      -HEAD -> No es del todo un metodo
 -->
         <h1>Ingresa tus Datos</h1>
-        <%
-            int edad=26;
-            out.println("tu edad es:"+edad);
-        %>                                
+                                    
         <form action="autenticar" method="post">
-            login<br>
-            <input type="text" name="login"><br>
-            password<br>
-            <input type="password" name="password"><br>
-            <input type="submit" value="ingresar">
+            Login<br>
+            <input type="text" name="login"><br><br>
+            Password<br>
+            <input type="password" name="password"><br><br>
+            <input type="submit" value="ingresar"><br>
                                   
         </form>
     </body>
