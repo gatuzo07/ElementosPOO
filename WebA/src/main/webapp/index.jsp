@@ -24,16 +24,18 @@
      -PUT -> update (sql)
      -DELETE -> delete (sql)
      -HEAD -> No es del todo un metodo
+
+     -Hibernate
 -->
-        <h1>Ingresa tus Datos</h1>
+    <h1><center>Iniciar Sesión</center></h1>
                                     
-        <form action="autenticar" method="post">
+    <center><form action="autenticar" method="post">
             Login<br>
             <input type="text" name="login"><br><br>
             Password<br>
             <input type="password" name="password"><br><br>
             <input type="submit" value="ingresar"><br>
                                   
-        </form>
+            </center></form>
     </body>
 </html>
