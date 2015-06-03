@@ -1,46 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.unitec.weba;
+
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 /**
  *
  * @author gatuzo07
  * 
- *  Caracteristicas de un POJO:
- *  -Encapsulamiento
- *  -
+ * @Entity Entidad quiere decir que vamos a mapear una tabla
+ * @Table(name = "USUARIO") Tabla a la que esta relacionada la entidad
+ * @Id  Muestra el Primary Key
+ * Obligatorio constructor por defecto
+ * Obligotorio constructor Primary Key
+ * hashCode y equals  Realiza las comparaciones de los objetos creados
  * 
- *  Agregar constructor por defecto
- *  Agregar constructor de Id
- *  Agregar constructor que inicialice todos los objetos
  */
-
-public class Usuario {
+@Entity
+@Table(name = "USUARIO")
+public class Usuario implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "ID")
     private Integer id;
+    
+    @Column(name = "NOMBRE")
     private String nombre;
+    
+    @Column(name = "EMAIL")
     private String email;
+    
+    @Column(name = "LOGIN")
     private String login;
+    
+    @Column(name = "PASSWORD")
     private String password;
 
-//Comando de arreglo tipo JSON    
-    @Override
-    public String toString() {
-        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", email=" + email + ", login=" + login + ", password=" + password + '}';
+    public Usuario() {
     }
 
-//Para incertar registros
-    public Usuario(Integer id, String nombre, String email, String login, String password) {
-        this.id = id;
-        this.nombre = nombre;
-        this.email = email;
-        this.login = login;
-        this.password = password;
-    }
-//Para realizar busquedas por id y solo modificar ese registro
     public Usuario(Integer id) {
         this.id = id;
-    }
-    
-//Se ocupa para hacer busquedas generales
-    public Usuario() {
     }
 
     public Integer getId() {
@@ -81,6 +95,31 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Usuario)) {
+            return false;
+        }
+        Usuario other = (Usuario) object;
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "com.unitec.weba.Usuario[ id=" + id + " ]";
     }
     
 }

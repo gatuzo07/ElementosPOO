@@ -25,7 +25,33 @@
      -DELETE -> delete (sql)
      -HEAD -> No es del todo un metodo
 
-     -Hibernate
+     -Hibernate 
+      1) Cargar la dependencia de Maven
+
+      2) Crear la tabla (MySQL)
+         Obligatorio Primary Key (PK)
+         Por cada tabla es obligatorio realizar las operaciones siguientes:
+            -Insertar       POST
+            -Buscar por Id  GET
+            -Buscar todos   GET
+            -Actualizar     PUT
+            -Borrar         DELETE
+
+      3) Crear con ayuda de Java Persistan Api (JPA Mapeo de Tablas) las entify clases apartir de las tablas
+            Hibernate -> Capa Transaccional -> Manejo de Sesión
+            JPA -> Capa Persistencia -> Mapeo de Tablas
+
+      4) Hibernate
+            -Crear achivo de configuración de Hibernate
+                Conexion a base de datos
+                Dialecto de base de datos (Servidor)
+                Manejo de sesión
+                Clases mapeadas
+                Credenciales de autenticación
+
+      5) Crear la clase para manejar las sesiones
+
+      6) Cargar el driver mysql como dependencia de Maven
 -->
     <h1><center>Iniciar Sesión</center></h1>
                                     
