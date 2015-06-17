@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Error
-    Created on : 20-may-2015, 0:18:38
+    Document   : respuesta
+    Created on : 12-jun-2015, 21:34:46
     Author     : gatuzo07
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1><center>Datos Incorrectos. Intenta de Nuevo</center></h1>
+        <h1><center>Registro Guardado Correctamente</center></h1>
     </body>
 </html>

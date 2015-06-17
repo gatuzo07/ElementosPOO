@@ -19,7 +19,7 @@ import org.hibernate.criterion.Restrictions;
 public class TestPojos {
 
     public static void main(String[] args) throws Exception{
-        
+/**        
         System.out.println("Probaremos todas las operaciones SQL");
 // 1)
         SessionFactory factory= HibernateUtilidades.getSessionFactory();
@@ -59,7 +59,7 @@ SELECT por id
                 
     System.out.println("El usuario buscado tiene nombre "+u.getNombre()); 
 */        
-        List<Usuario> usuarios= sesion.createCriteria(Usuario.class).list();
+/**        List<Usuario> usuarios= sesion.createCriteria(Usuario.class).list();
                 tranza.commit();
                 sesion.close();    
                 for(Usuario usu:usuarios){
@@ -67,7 +67,16 @@ SELECT por id
                 }
     
     System.out.println("Total de Registros: "+usuarios.size());
- 
+*/
+        Usuario u=new Usuario();
+//                u.setId(1);
+                u.setLogin("Wayat");
+                u.setNombre("Wayat Wayaba");
+                u.setEmail("ww@gmail.com");
+                u.setPassword("123456");
+
+                DAOUsuario daou=new DAOUsuario();
+                
     }
     
 }
