@@ -37,7 +37,13 @@ pantalla. Pagina Responsiva
                  * Vamos a programar el botón                
                  */
                 $("#primero").click(function(){
-                    $("#resultado").html("Haz oprimido el botón");
+                    $.ajax({
+                        url:"portalito",
+                        method: "post",
+                        success: function (datos) {
+                        $("#resultado").html(datos);                            
+                    }
+                    });                    
                 });
             });
         </script>
