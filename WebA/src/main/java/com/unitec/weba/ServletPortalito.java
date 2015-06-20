@@ -26,7 +26,7 @@ public class ServletPortalito extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
-        out.println("Respuesta desde el Servelet");
+        String nombre=request.getParameter("nombre");
+        out.println("Hola como estas "+nombre);
     }
 }
