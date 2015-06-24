@@ -45,7 +45,7 @@ public class ServletAutenticar extends HttpServlet {
         
 //buscar aqui el usuario cuyo login y password se proporcionaron
 //una vez buscado, verificar su id, supongamos 1
-        Usuario u1=new Usuario();
+        Usuario u1=new Usuario(1);
         u1.setId(1);
 //despues de esto guardar sesion con la clase administracion
         Administracion a=new Administracion();

@@ -36,12 +36,14 @@ public class DAOAdministracion {
     public void guardar(Administracion u)throws Exception{
 //Aqui poner el codigo de tu guardado
 //Despues invocar el metodo cerrarTodo
+        abrirSesion();
         sesion.save(u);
         cerrarTodo();
     }
 //Creamos el update
     public void actualizar(Administracion u)throws Exception{
-         sesion.update(u);
+        abrirSesion();
+        sesion.update(u);
         cerrarTodo();
     }
 //Creamos el buscarTodos

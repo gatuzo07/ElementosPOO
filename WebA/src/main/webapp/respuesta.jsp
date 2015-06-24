@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1><center>Registro Guardado Correctamente</center></h1>
+    <center><a href="index.jsp"><input type="button" name="Iniciar Sesión" value="Aceptar"/></a></center>
     </body>
 </html>
