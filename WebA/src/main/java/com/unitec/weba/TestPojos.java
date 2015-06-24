@@ -69,7 +69,7 @@ SELECT por id
     System.out.println("Total de Registros: "+usuarios.size());
 */
         Usuario u=new Usuario();
-//                u.setId(1);
+                u.setId(1);
                 u.setLogin("Wayat");
                 u.setNombre("Wayat Wayaba");
                 u.setEmail("ww@gmail.com");

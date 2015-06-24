@@ -13,7 +13,7 @@ import org.hibernate.Transaction;
  * throws Exception:  Para lanzar excepciones por si surge algun error
  * Se manejan bloques estaticos y metodos estaticos
  */
-public class DAOUsuario {
+public class DAOAdministracion {
     static SessionFactory factory;
     static Session sesion;
     static Transaction tranza; 
@@ -29,34 +29,35 @@ public class DAOUsuario {
         sesion.close();
     }
     
-    public DAOUsuario(){
+    public DAOAdministracion(){
         
     }
 //Creamos el insert
-    public void guardar(Usuario u)throws Exception{
+    public void guardar(Administracion u)throws Exception{
 //Aqui poner el codigo de tu guardado
 //Despues invocar el metodo cerrarTodo
         sesion.save(u);
         cerrarTodo();
     }
 //Creamos el update
-    public void actualizar(Usuario u)throws Exception{
+    public void actualizar(Administracion u)throws Exception{
          sesion.update(u);
         cerrarTodo();
     }
 //Creamos el buscarTodos
-    public List<Usuario> buscarTodos()throws Exception{
+    public List<Administracion> buscarTodos()throws Exception{
         
         return null;
     }
 //Creamos el buscar por Id
-    public Usuario buscarPorId(Integer id)throws Exception{
+    public Administracion buscarPorId(Integer id)throws Exception{
         
         return null;
     }
 //Creamos el de autenticar
-    public boolean autenticar(Usuario u)throws Exception{
+    public boolean autenticar(Administracion u)throws Exception{
         
         return false;
     }
 }
+

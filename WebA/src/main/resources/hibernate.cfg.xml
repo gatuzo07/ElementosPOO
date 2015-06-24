@@ -9,5 +9,6 @@
     <property name="hibernate.connection.username">root</property>
  <!-- Se agregan las clases mapeadas -->    
     <mapping class="com.unitec.weba.Usuario"></mapping>
+    <mapping class="com.unitec.weba.Administracion"></mapping>
   </session-factory>
 </hibernate-configuration>
