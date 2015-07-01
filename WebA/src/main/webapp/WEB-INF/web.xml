@@ -15,6 +15,10 @@
         <servlet-name>ServletPortalito</servlet-name>
         <servlet-class>com.unitec.weba.ServletPortalito</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BuscarTodosUsuarios</servlet-name>
+        <servlet-class>com.unitec.weba.ServletBuscarTodosUsuarios</servlet-class>
+    </servlet>
     <servlet-mapping>
         <!-- Nombre de como lo identifica la parte Cliente -->
         <servlet-name>ServletAutenticar</servlet-name>
@@ -28,6 +32,10 @@
     <servlet-mapping>
         <servlet-name>ServletPortalito</servlet-name>
         <url-pattern>/portalito</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarTodosUsuarios</servlet-name>
+        <url-pattern>/usuarios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

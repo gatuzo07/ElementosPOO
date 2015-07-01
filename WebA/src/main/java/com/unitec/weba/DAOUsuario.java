@@ -48,8 +48,10 @@ public class DAOUsuario {
     }
 //Creamos el buscarTodos
     public List<Usuario> buscarTodos()throws Exception{
+        abrirSesion();
+        List<Usuario> usuarios=sesion.createCriteria(Usuario.class).list();
+        return usuarios;
         
-        return null;
     }
 //Creamos el buscar por Id
     public Usuario buscarPorId(Integer id)throws Exception{
