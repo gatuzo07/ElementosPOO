@@ -2,6 +2,7 @@ package org.unitec.maven;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * @author gatuzo07
@@ -23,8 +24,12 @@ public class Aplicacion {
         SpringApplication.run(Aplicacion.class, args);
         
         System.out.println("Un mensaje desde spring boot");
-        
-        LeerArchivo archivo=new LeerArchivo();
-        System.out.println(archivo.leer());        
+        AnnotationConfigApplicationContext ctx=new AnnotationConfigApplicationContext(ConfiguracionBasica.class);
+        Leer ServicioLeer=ctx.getBean(Leer.class);
+        System.out.println(ServicioLeer.leer());
+        /**
+         * Leer objeto=new LeerArchivo();
+         * System.out.println(objeto.leer());   
+         */     
     }
 }

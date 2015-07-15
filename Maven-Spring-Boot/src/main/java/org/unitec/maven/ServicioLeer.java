@@ -1,14 +1,12 @@
 package org.unitec.maven;
 
+import java.io.*;
+
 /**
  * @author gatuzo07
  */
-
-import java.io.*;
-
-public class LeerArchivo implements Leer{
+public class ServicioLeer {
     
-    @Override
     public String leer() throws Exception{
         File file=new File("/Users/gatuzo07/Desktop/Lectura.txt");
         FileInputStream fis=new FileInputStream(file);
@@ -19,5 +17,4 @@ public class LeerArchivo implements Leer{
         }
         return sb.toString();
     }
-    
 }
