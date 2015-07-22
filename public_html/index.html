@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Angular lo mas potente que tiene es la tecnologia TWO WAY BINDING
+Ejemplo:    <p>Escribe algo</p>
+            <input type="text" ng-model="nombre">
+            {{nombre}}
 -->
-<html>
+<html ng-app="AplicacionChiquita">
     <head>
-        <title>TODO supply a title</title>
+        <title>Hola Mundo en Angular</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cargamos bootstrap -->
+<!-- Cargamos bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
-
-
-    <!-- JS -->
-    <!--cargamos angular y jquery -->
+<!-- JS -->
+<!--cargamos angular y jquery -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
     </head>
-    <body>
- 
+    <body ng-controller="ControladorPrincipal">
+        <center>
+            {{mensaje}}
+            <h3>Escribe algo</h3>
+            <input type="text" ng-model="nombre">
+            {{nombre}}
+            
+            <h4>Manejo de eventos de botón con Angular</h4>
+            <button class="btn btn-info" ng-click="boton()">Presiona el botón</button>
+            {{algo}}
+        </center>
     </body>
 </html>
