@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+Angular lo mas potente que tiene es la tecnologia TWO WAY BINDING
+Ejemplo:    <p>Escribe algo</p>
+            <input type="text" ng-model="nombre">
+            {{nombre}}
+-->
+<html ng-app="AplicacionChiquita">
+    <head>
+        <title>Hola Mundo en Angular</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Cargamos bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+<!-- JS -->
+<!--cargamos angular y jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    </head>
+    <body ng-controller="ControladorPrincipal">
+        <center>
+            {{mensaje}}
+            <h3>Escribe algo</h3>
+            <input type="text" ng-model="nombre">
+            {{nombre}}
+            
+            <h4>Manejo de eventos de botón con Angular</h4>
+            <button class="btn btn-info" ng-click="boton()">Presiona el botón</button>
+            {{algo}}
+        </center>
+    </body>
+</html>
