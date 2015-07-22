@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>WebA</display-name>
+    <servlet>
+        <!-- Nombre real de Servlet -->
+        <servlet-name>ServletAutenticar</servlet-name>
+        <!-- Nombre del Servlet dentro de Java -->
+        <servlet-class>com.unitec.weba.ServletAutenticar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletGuardarUsuario</servlet-name>
+        <servlet-class>com.unitec.weba.ServletGuardarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPortalito</servlet-name>
+        <servlet-class>com.unitec.weba.ServletPortalito</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BuscarTodosUsuarios</servlet-name>
+        <servlet-class>com.unitec.weba.ServletBuscarTodosUsuarios</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!-- Nombre de como lo identifica la parte Cliente -->
+        <servlet-name>ServletAutenticar</servlet-name>
+        <url-pattern>/ingresar</url-pattern>
+        <url-pattern>/autenticar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletGuardarUsuario</servlet-name>
+        <url-pattern>/guardar-usuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPortalito</servlet-name>
+        <url-pattern>/portalito</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarTodosUsuarios</servlet-name>
+        <url-pattern>/usuarios</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!-- Lista de archivos de bienvenida -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

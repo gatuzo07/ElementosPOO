@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Verifica los dispositvos compatibles con HTML 5 y verifica la dimención de la 
+pantalla. Pagina Responsiva
+
+<div -> id  nos sirve para diseño visual o para programar
+
+# -> Invoca un id para darle algun formato
+-->
+<html>
+    <head>
+        <title>Portalito</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.js"></script>
+        <style>
+            #primero{
+                width: 320px;
+                height: 40px;           
+                background-color: #39b3d7;
+                color: white;
+                text-align: center;
+                padding-top: 20px;
+                margin: 0 auto;
+                cursor: pointer;
+                border-radius: 7px;
+            }
+            #primero:hover{
+                background-color: #555555;
+            }
+        </style>
+        
+        <script>
+            $(document).ready(function(){
+                /*
+                 * Vamos a programar el botón                
+                 */
+                $("#primero").click(function(){
+                    $.ajax({
+                        url: "portalito",
+                        method: "post",
+                        success: function (datos) {
+                        $("#resultado").html(datos);                            
+                    }
+                    });                    
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+        <div id="primero">Probando jQuery, esto es un botón</div>
+        <div id="resultado"></div>
+    </body>
+</html>
