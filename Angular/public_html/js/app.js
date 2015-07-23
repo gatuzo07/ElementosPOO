@@ -21,7 +21,7 @@ aplicacion.controller('ControladorPrincipal',function($scope){
     $scope.kelvin='';
     $scope.boton=function(){
         cent=(($scope.centigrados)*1.8)+32;
-        fahr=(parseFloat($scope.centigrados)+273.73);
+        fahr=(parseFloat($scope.centigrados)+parseFloat(273.73));
         $scope.fahrenheit='ºF = '+cent;
         $scope.kelvin='ºK = '+fahr;
     };
