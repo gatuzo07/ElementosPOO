@@ -15,11 +15,15 @@
 var aplicacion=angular.module('AplicacionChiquita',[]);
 
 aplicacion.controller('ControladorPrincipal',function($scope){
-    $scope.mensaje='Hola desde angular';
-    $scope.nombre='';
-    $scope.algo='';
+/*  $scope.mensaje='Hola desde angular'; */
+    $scope.centigrados='';
+    $scope.fahrenheit='';
+    $scope.kelvin='';
     $scope.boton=function(){
-        $scope.algo='Haz presionado el botón';
+        cent=(($scope.centigrados)*1.8)+32;
+        fahr=(parseFloat($scope.centigrados)+273.73);
+        $scope.fahrenheit='ºF = '+cent;
+        $scope.kelvin='ºK = '+fahr;
     };
 }
         );
