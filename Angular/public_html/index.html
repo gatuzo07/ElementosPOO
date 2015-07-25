@@ -20,16 +20,22 @@ Ejemplo:    <p>Escribe algo</p>
     </head>
     <body ng-controller="ControladorPrincipal">
         <center>
-<!--        {{mensaje}} -->
+<!--        {{mensaje}}     -->
             <h3>Convertir de ºC</h3>
             <input type="text" ng-model="centigrados">
-<!--        {{nombre}} -->        
+<!--        {{nombre}}      -->
             <h4>Presiona el botón para convertir a ºF y ºK</h4>
             <button class="btn btn-info" ng-click="boton()">Convertir</button>
             <p></p>
             <p>{{fahrenheit}}</p>
             <p></p>
             <p>{{kelvin}}</p>
+            <p></p>
+            <h3>Introduce los datos del producto</h3>
+            <input type="text" placeholder="Nombre del producto">
+            <input type="text" placeholder="Costo del producto">
+            <input type="text" placeholder="Numero de unidades">
+            <button class="btn btn-info" ng-click="GuargarProducto">Guardar Producto</button>
         </center>
     </body>
 </html>

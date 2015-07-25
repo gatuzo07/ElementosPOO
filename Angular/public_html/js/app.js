@@ -14,7 +14,7 @@
 
 var aplicacion=angular.module('AplicacionChiquita',[]);
 
-aplicacion.controller('ControladorPrincipal',function($scope){
+aplicacion.controller('ControladorPrincipal',function($scope, $http){
 /*  $scope.mensaje='Hola desde angular'; */
     $scope.centigrados='';
     $scope.fahrenheit='';
@@ -25,7 +25,10 @@ aplicacion.controller('ControladorPrincipal',function($scope){
         $scope.fahrenheit='ºF = '+cent;
         $scope.kelvin='ºK = '+fahr;
     };
-}
-        );
-
-
+    $scope.GuardarProducto=function(){
+/* Enviamos la información a traves de REST */
+        $http.post('http://localhost:8080/producto/pinguinos/10/25').success(function(datos){
+            console.log(datos);
+                });
+    };
+});
