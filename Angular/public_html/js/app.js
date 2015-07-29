@@ -27,7 +27,7 @@ aplicacion.controller('ControladorPrincipal',function($scope, $http){
     };
     $scope.GuardarProducto=function(){
 /* Enviamos la información a traves de REST */
-        $http.post('http://localhost:8080/producto/pinguinos/10/25').success(function(datos){
+        $http.post('http://localhost:8383/producto/{nombre}/{costo}/{unidades}').success(function(datos){
             console.log(datos);
                 });
     };
