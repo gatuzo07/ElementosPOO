@@ -19,12 +19,28 @@ aplicacion.controller('ControladorPrincipal',function($scope, $http){
     $scope.centigrados='';
     $scope.fahrenheit='';
     $scope.kelvin='';
+    
+    $scope.nombre='';
+    $scope.algo='';
+    $scope.diacorte='';
+    
+    $scope.apachurrame=function(){
+        $scope.algo='Has presionado el botón';
+    };
+    
+    $scope.guardar=function(){
+        $http.post('http://localhost:9000/tarjeta/'+$scope.nombre+'/'+$scope.diacorte).success(function(data){
+            console.log(data);
+        });
+    };
+    
     $scope.boton=function(){
         cent=(($scope.centigrados)*1.8)+32;
         fahr=(parseFloat($scope.centigrados)+parseFloat(273.73));
         $scope.fahrenheit='ºF = '+cent;
         $scope.kelvin='ºK = '+fahr;
     };
+    
     $scope.GuardarProducto=function(){
 /* Enviamos la información a traves de REST */
         $http.post('http://localhost:8383/producto/{nombre}/{costo}/{unidades}').success(function(datos){
