@@ -33,20 +33,31 @@ Ejemplo:    <p>Escribe algo</p>
             <p></p>
 -->
             <h3>Introduce los datos del producto</h3>
-            <input type="text" placeholder="Nombre del producto">
-            <input type="text" placeholder="Costo del producto">
-            <input type="text" placeholder="Numero de unidades">
-            <button class="btn btn-info" ng-click="GuargarProducto()">Guardar Producto</button>
+            <input type="text" ng-model="nombre" placeholder="Nombre del producto">
+            <input type="text" ng-model="costo" placeholder="Costo del producto">
+            <input type="text" ng-model="unidades" placeholder="Numero de unidades">
+            <button class="btn btn-info" ng-click="GuardarProducto()">Guardar Producto</button>
             
-            <h3>Introduce los datos de la Tarjeta</h3>
-            <button class="btn btn-info" ng-click="apachurrame()">Presiona el botón</button>
-            {{algo}}
+            <h3>Introduce los datos de la tarjeta</h3>
             <input type="text" ng-model="nombre" placeholder="Nombre">
             <input type="text" ng-model="diacorte" placeholder="Día corte">
-            <button class="btn btn-info" ng-click="guardar()">Guardar</button>
+            <button class="btn btn-info" ng-click="GuardarTarjeta()">Guardar Tarjeta</button>
+            
+            <h3>Introduce los datos de los gastos</h3>
+            <input type="text" ng-model="fecha" placeholder="Fecha">
+            <input type="text" ng-model="concepto" placeholder="Concepto">
+            <input type="text" ng-model="cantidad" placeholder="Cantidad">            
+            <button class="btn btn-info" ng-click="GuardarGasto()">Guardar Gasto</button>
+            
             
             <h3>Buscar todos</h3>
-            
+            <table class="table table-bordered">
+                <tr class="success">
+                    <th>Id Tarjeta</th>
+                    <th>Nombre Tarjeta</th>
+                    <th>Día Corte</th>
+                </tr>
+            </table>
 
         </center>
     </body>
