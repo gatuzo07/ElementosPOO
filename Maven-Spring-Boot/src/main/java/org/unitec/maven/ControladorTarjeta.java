@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class ControladorTarjeta {
-    @RequestMapping(value="/tarjeta/{nombre}/{fechaCorte}", method = RequestMethod.POST, headers={"Accept=text/html"})
-    @ResponseBody String guardarTarjeta(@PathVariable String nombre, @PathVariable Integer fechaCorte)throws Exception{
+    @RequestMapping(value="/tarjeta/{nombre}/{diaCorte}", method = RequestMethod.POST, headers={"Accept=text/html"})
+    @ResponseBody String guardarTarjeta(@PathVariable String nombre, @PathVariable Integer diaCorte)throws Exception{
         Tarjeta t=new Tarjeta();
-        t.setDiacorte(fechaCorte);
+        t.setDiacorte(diaCorte);
         t.setNombre(nombre);
         DAOTarjeta dao=new DAOTarjeta();
         
