@@ -43,19 +43,19 @@ aplicacion.controller('ControladorPrincipal',function($scope, $http){
     $scope.GuardarProducto=function(){
 /* Enviamos la información a traves de REST  $http.post('http://localhost:8383/producto/{nombre}/{costo}/{unidades}').success(function(datos){ */
         $http.post('http://localhost:3306/producto/'+$scope.nombre+'/'+$scope.costo+'/'+$scope.unidades).success(function(data){
-            console.log(data);
+            console.log(data); 
                 });
     };
     
     $scope.GuardarTarjeta=function(){
         $http.post('http://localhost:3306/tarjeta/'+$scope.nombre+'/'+$scope.diacorte).success(function(data){
-            console.log(data);
+            console.log(data); 
         });
     };
         
     $scope.GuardarGasto=function(){
         $http.post('http://localhost:3306/gastos/'+$scope.fecha+'/'+$scope.concepto+'/'+$scope.cantidad).success(function(data){
-            console.log(data);
+            console.log(data); 
         })
     }
 });
