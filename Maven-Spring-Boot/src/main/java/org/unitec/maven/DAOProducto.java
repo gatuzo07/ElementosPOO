@@ -57,5 +57,4 @@ public class DAOProducto {
         
         ses.save(p);
         ses.close();
-*/    
-        
+*/
